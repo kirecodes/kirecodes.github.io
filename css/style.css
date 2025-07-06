@@ -1,0 +1,48 @@
+:root {
+	--drac-bg: #282a36;
+	--drac-fg: #f8f8f2;
+	--drac-purple: #bd93f9;
+	--drac-cyan: #8be9fd;
+	--drac-green: #50fa7b;
+	--drac-pink: #ff79c6;
+}
+
+body {
+	background: var(--drac-bg);
+	color: var(--drac-fg);
+	font-family: system-ui, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+	text-align: center;
+	margin: 0;
+	padding: 2rem;
+}
+
+main {
+	max-width: 500px;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+p {
+	margin: 0.5rem 0;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+a {
+	color: var(--drac-purple);
+	text-decoration: none;
+	margin: 0 0.5rem;
+}
+
+a:hover {
+	color: var(--drac-pink);
+	text-decoration: underline;
+}
