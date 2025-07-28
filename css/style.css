@@ -1,0 +1,404 @@
+/* ----------------------------------------------------------------
+   CUSTOM PROPERTIES (CSS VARIABLES)
+   ---------------------------------------------------------------- */
+
+:root {
+	/* Dracula Light Theme - because who doesn't love a good vampire theme */
+	--color-bg: #f8f8f2;
+	--color-text: #282a36;
+	--color-text-muted: #5b6ba4;
+	--color-accent: #8b5cf6;
+	--color-link: #1e66f5;
+	--color-border: #44475a;
+	--color-focus: #ff79c6;
+
+	/* Spacing that makes sense */
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 1.5rem;
+	--space-lg: 2rem;
+	--space-xl: 2.5rem;
+
+	/* Typography - Inter because it's readable and doesn't make my eyes hurt */
+	--font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+	--font-size-base: 16px;
+	--font-size-lg: 1.5rem;
+	--font-size-xl: 2.5rem;
+	--line-height: 1.6;
+
+	/* Layout constraints */
+	--content-width: 600px;
+	--content-padding: 40px 20px;
+
+	/* Smooth transitions because we're not animals */
+	--transition-fast: 0.15s ease;
+	--transition-base: 0.3s ease;
+}
+
+[data-theme="dark"] {
+	/* Dark mode for when you're coding at 2am */
+	--color-bg: #282a36;
+	--color-text: #f8f8f2;
+	--color-text-muted: #a6b3f0;
+	--color-accent: #bd93f9;
+	--color-link: #8be9fd;
+	--color-border: #44475a;
+	--color-focus: #ff79c6;
+}
+
+/* ----------------------------------------------------------------
+   RESET & BASE STYLES
+   ---------------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-family);
+	font-size: var(--font-size-base);
+	font-weight: 400;
+	line-height: var(--line-height);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	transition: color var(--transition-base),
+		background-color var(--transition-base);
+	font-feature-settings: "kern" 1;
+	text-rendering: optimizeLegibility;
+}
+
+/* ----------------------------------------------------------------
+   LAYOUT
+   ---------------------------------------------------------------- */
+
+main {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding: var(--content-padding);
+}
+
+/* ----------------------------------------------------------------
+   TYPOGRAPHY
+   ---------------------------------------------------------------- */
+
+h1 {
+	margin: 0 0 var(--space-md) 0;
+	font-size: var(--font-size-xl);
+	font-weight: 600;
+	color: var(--color-accent);
+	text-transform: lowercase;
+}
+
+h2 {
+	margin: var(--space-xl) 0 var(--space-sm) 0;
+	font-size: var(--font-size-lg);
+	font-weight: 500;
+	color: var(--color-accent);
+	text-transform: lowercase;
+}
+
+h2:first-of-type {
+	margin-top: var(--space-lg);
+}
+
+h3 {
+	margin: var(--space-sm) 0 var(--space-xs) 0;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: var(--color-text);
+}
+
+p {
+	margin: 0 0 var(--space-sm) 0;
+}
+
+/* ----------------------------------------------------------------
+   LINKS & INTERACTIVE ELEMENTS
+   ---------------------------------------------------------------- */
+
+a {
+	color: var(--color-link);
+	text-decoration: none;
+	transition: color var(--transition-fast),
+		text-decoration var(--transition-fast);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 2px solid var(--color-focus);
+	outline-offset: 2px;
+	text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------
+   SKIP LINK - for accessibility because we care about everyone
+   ---------------------------------------------------------------- */
+
+.skip-link {
+	position: absolute;
+	top: -48px;
+	left: var(--space-xs);
+	z-index: 1000;
+	padding: var(--space-xs) var(--space-sm);
+	background: var(--color-accent);
+	color: var(--color-bg);
+	font-weight: 500;
+	border-radius: 4px;
+	transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+	top: var(--space-xs);
+	outline: 2px solid var(--color-focus);
+}
+
+/* ----------------------------------------------------------------
+   HEADER
+   ---------------------------------------------------------------- */
+
+.site-header {
+	margin-bottom: var(--space-lg);
+}
+
+.intro {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------------
+   LISTS
+   ---------------------------------------------------------------- */
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	margin-bottom: var(--space-xs);
+}
+
+.projects-list .project-meta {
+	color: var(--color-text-muted);
+}
+
+/* ----------------------------------------------------------------
+   FAQ SECTION
+   ---------------------------------------------------------------- */
+
+.faq-container {
+	margin: var(--space-sm) 0;
+}
+
+.faq-item {
+	margin-bottom: var(--space-md);
+}
+
+.faq-item:last-child {
+	margin-bottom: 0;
+}
+
+.faq-item h3 {
+	margin-bottom: var(--space-xs);
+}
+
+.faq-item p {
+	margin: 0;
+	padding-left: var(--space-sm);
+	border-left: 3px solid var(--color-accent);
+}
+
+/* ----------------------------------------------------------------
+   CONTACT SECTION
+   ---------------------------------------------------------------- */
+
+.contact-section {
+	margin-top: var(--space-xl);
+	padding-top: var(--space-sm);
+	border-top: 1px solid var(--color-border);
+}
+
+.contact-nav {
+	margin: var(--space-sm) 0;
+}
+
+.contact-nav a {
+	margin-right: var(--space-sm);
+	font-weight: 500;
+}
+
+/* ----------------------------------------------------------------
+   THEME SWITCHER - because choice is good
+   ---------------------------------------------------------------- */
+
+.theme-switcher {
+	margin-top: var(--space-xl);
+	padding-top: var(--space-sm);
+	border-top: 1px solid var(--color-border);
+}
+
+.theme-switcher fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.theme-switcher legend {
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: var(--color-text-muted);
+	margin-bottom: var(--space-xs);
+}
+
+.theme-options {
+	display: flex;
+	gap: var(--space-sm);
+	flex-wrap: wrap;
+}
+
+.theme-options label {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	cursor: pointer;
+	font-size: 0.9rem;
+	color: var(--color-text-muted);
+}
+
+.theme-options input[type="radio"] {
+	margin: 0;
+	accent-color: var(--color-accent);
+}
+
+.theme-options input[type="radio"]:focus {
+	outline: 2px solid var(--color-focus);
+	outline-offset: 2px;
+}
+
+/* ----------------------------------------------------------------
+   ACCESSIBILITY UTILITIES - because inclusion matters
+   ---------------------------------------------------------------- */
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE DESIGN - mobile users exist
+   ---------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+	main {
+		padding: var(--space-lg) var(--space-sm);
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.theme-options {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.contact-nav a {
+		display: block;
+		margin-bottom: var(--space-xs);
+		margin-right: 0;
+	}
+}
+
+/* ----------------------------------------------------------------
+   REDUCED MOTION - respect user preferences
+   ---------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ----------------------------------------------------------------
+   HIGH CONTRAST MODE - accessibility first
+   ---------------------------------------------------------------- */
+
+@media (prefers-contrast: high) {
+	:root {
+		--color-bg: #ffffff;
+		--color-text: #000000;
+		--color-link: #0000ff;
+		--color-focus: #ff0000;
+		--color-accent: #000080;
+		--color-border: #000000;
+	}
+
+	[data-theme="dark"] {
+		--color-bg: #000000;
+		--color-text: #ffffff;
+		--color-link: #00ffff;
+		--color-focus: #ffff00;
+		--color-accent: #ffffff;
+		--color-border: #ffffff;
+	}
+
+	a:focus,
+	input:focus,
+	.skip-link:focus {
+		outline: 3px solid var(--color-focus);
+		outline-offset: 2px;
+	}
+}
+
+/* ----------------------------------------------------------------
+   PRINT STYLES - for the rare occasion someone prints a portfolio
+   ---------------------------------------------------------------- */
+
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	.skip-link,
+	.theme-switcher {
+		display: none;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	a[href^="http"]:after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+	}
+
+	main {
+		max-width: none;
+		padding: 0;
+	}
+}
