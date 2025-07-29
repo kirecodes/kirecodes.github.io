@@ -1,12 +1,11 @@
 # kire góngora - portfolio site
 
 My personal portfolio site built for GitHub Pages.
-
 **live site:** [kgo.lol](https://kgo.lol)
 
 ## about
 
-Frontend developer showcasing work with vanilla HTML, CSS, and JavaScript. Currently learning React & TypeScript while modernizing web apps at Idaho National Laboratory.
+Frontend developer with a background in military service and healthcare, currently modernizing web apps at a national laboratory. I tackle problems from different perspectives, always with the people they impact in mind. Learning React & TypeScript while seeking my next remote role.
 
 ## tiny tech stack
 
@@ -34,7 +33,7 @@ Built with accessibility in mind:
 - **LinkedIn:** [kirenia](https://linkedin.com/in/kirenia)
 - **Bluesky:** [kgo.lol](https://bsky.app/profile/kgo.lol)
 
-My time at the lab is coming to an end. I'm seeking remote opportunities with global teams 🌍
+My contract at the lab is ending. Seeking remote opportunities with global companies committed to building accessible experiences 🌍
 
 ---
 
