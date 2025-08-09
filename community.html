@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Primary Meta Tags -->
+		<title>Community Work | Kire G</title>
+		<meta name="title" content="Community Work | Kire G" />
+		<meta
+			name="description"
+			content="Get in touch about community projects. I help local organizations with accessibility fixes, performance optimization, and technical development they can't afford at market rates." />
+		<meta name="author" content="Kire G" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://kirecodes.github.io/community.html" />
+		<meta property="og:title" content="Community Work | Kire G" />
+		<meta
+			property="og:description"
+			content="Get in touch about community projects. I help local organizations with accessibility fixes, performance optimization, and technical development." />
+		<meta property="og:site_name" content="Kire G - Web Engineer" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary" />
+		<meta
+			property="twitter:url"
+			content="https://kirecodes.github.io/community.html" />
+		<meta property="twitter:title" content="Community Work | Kire G" />
+		<meta
+			property="twitter:description"
+			content="Get in touch about community projects. I help local organizations with accessibility fixes, performance optimization, and technical development." />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<!-- Skip Navigation Links for Screen Readers -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<a href="#contact-form" class="skip-link">Skip to contact form</a>
+
+		<main id="main-content">
+			<header>
+				<h1>Community Work</h1>
+				<p><a href="index.html">← Back to home</a></p>
+			</header>
+
+			<section aria-labelledby="about-community-work">
+				<h2 id="about-community-work">What I Do</h2>
+				<p>
+					I help local organizations that truly need technical assistance but
+					can't afford market rates. My focus areas include:
+				</p>
+				<ul>
+					<li>
+						<strong>Accessibility fixes</strong> - Making websites usable for
+						everyone
+					</li>
+					<li>
+						<strong>Performance optimization</strong> - Speeding up slow sites
+						and apps
+					</li>
+					<li>
+						<strong>Technical audits</strong> - Identifying security and
+						usability issues
+					</li>
+					<li>
+						<strong>Custom development</strong> - Building tools that automate
+						repetitive tasks
+					</li>
+				</ul>
+				<p>
+					The work has to genuinely impact your organization's mission. I
+					prioritize projects that serve communities, education, healthcare, or
+					social good.
+				</p>
+			</section>
+
+			<section aria-labelledby="contact-heading">
+				<h2 id="contact-heading">Get In Touch</h2>
+				<p>
+					Interested in working together? Tell me about your organization and
+					project needs.
+				</p>
+
+				<form
+					id="contact-form"
+					class="community-form"
+					action="https://formspree.io/f/xldlaerq"
+					method="POST">
+					<input type="hidden" name="_subject" value="Community Work Inquiry" />
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							aria-describedby="name-help" />
+						<div id="name-help" class="form-help">
+							Your full name or organization contact
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							aria-describedby="email-help" />
+						<div id="email-help" class="form-help">
+							I'll use this to get back to you
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea
+							id="message"
+							name="message"
+							rows="6"
+							required
+							aria-describedby="message-help"
+							placeholder="Tell me about your organization, the technical challenge you're facing, and how it impacts your mission..."></textarea>
+						<div id="message-help" class="form-help">
+							Include details about your organization, the technical help
+							needed, and your mission
+						</div>
+					</div>
+
+					<button type="submit" class="submit-button">Send It</button>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
